@@ -4,6 +4,10 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { ChartModule } from 'ng-apexcharts';
+import { NgxApexchartsModule } from 'ngx-apexcharts';
+
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
@@ -16,6 +20,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { MatCardModule } from '@angular/material/card';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,7 +39,6 @@ import { TaxiListComponent } from './Pages/taxi/taxi-list/taxi-list.component';
 import { TaxiDriversComponent } from './Pages/taxi/taxi-drivers/taxi-drivers.component';
 import { ClientListComponent } from './Pages/client/client-list/client-list.component';
 import { TravelsComponent } from './Pages/client/travels/travels.component';
-import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { MessagesComponent } from './Pages/messages/messages.component';
 import { AddBusComponent } from './modals/add-bus/add-bus.component';
@@ -42,6 +47,12 @@ import { AddBusLineComponent } from './modals/add-bus-line/add-bus-line.componen
 import { AddBusDriverComponent } from './modals/add-bus-driver/add-bus-driver.component';
 import { AddTaxiComponent } from './modals/add-taxi/add-taxi.component';
 import { AddTaxiDriverComponent } from './modals/add-taxi-driver/add-taxi-driver.component';
+import { TopWidgetComponent } from './Pages/Dashboard/top-widget/top-widget.component';
+import { DashboardComponent } from './Pages/Dashboard/dashboard.component';
+import { TrafficTaxiVsBusComponent } from './Pages/Dashboard/traffic-taxi-vs-bus/traffic-taxi-vs-bus.component';
+import { TrafficByDayComponent } from './Pages/Dashboard/traffic-by-day/traffic-by-day.component';
+import { ServicesByDayComponent } from './Pages/Dashboard/services-by-day/services-by-day.component';
+import { TaxiRevenueByDayComponent } from './Pages/Dashboard/taxi-revenu-by-day/taxi-revenu-by-day.component';
 
 
 @NgModule({
@@ -69,6 +80,11 @@ import { AddTaxiDriverComponent } from './modals/add-taxi-driver/add-taxi-driver
     AddBusDriverComponent,
     AddTaxiComponent,
     AddTaxiDriverComponent,
+    TopWidgetComponent,
+    TrafficTaxiVsBusComponent,
+    TrafficByDayComponent,
+    ServicesByDayComponent,
+    TaxiRevenueByDayComponent,
    
   ],
   imports: [
@@ -89,6 +105,9 @@ import { AddTaxiDriverComponent } from './modals/add-taxi-driver/add-taxi-driver
     MatFormFieldModule,
     MatSelectModule,
     MatOptionModule,
+    MatCardModule,
+    FontAwesomeModule,
+    NgxApexchartsModule,
 
   ],
   providers: [

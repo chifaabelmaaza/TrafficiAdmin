@@ -1,12 +1,12 @@
 <!-- app.component.html -->
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="side" opened class="sidenav">
+  <mat-sidenav mode="side" opened class="sidenav" *ngIf="!hideNavbarFooter">
    <app-sidebar></app-sidebar>
   </mat-sidenav>
 
   <mat-sidenav-content>
    
-    <app-navbar class="navbar"></app-navbar>
+    <app-navbar class="navbar" *ngIf="!hideNavbarFooter"></app-navbar>
    
     <div class="content">
       <router-outlet></router-outlet>

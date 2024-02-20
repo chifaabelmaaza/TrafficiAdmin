@@ -7,6 +7,11 @@ import { ColumnMode, SortType } from '@swimlane/ngx-datatable';
 import { AlertComponent } from '../alert/alert.component';
 import { AddModalComponent } from '../add-modal/add-modal.component';
 import { AddBusComponent } from '../../modals/add-bus/add-bus.component';
+import { AddBusStationComponent } from '../../modals/add-bus-station/add-bus-station.component';
+import { AddBusDriverComponent } from '../../modals/add-bus-driver/add-bus-driver.component';
+import { AddBusLineComponent } from '../../modals/add-bus-line/add-bus-line.component';
+import { AddTaxiComponent } from '../../modals/add-taxi/add-taxi.component';
+import { AddTaxiDriverComponent } from '../../modals/add-taxi-driver/add-taxi-driver.component';
 
 @Component({
   selector: 'app-table',
@@ -53,36 +58,31 @@ export class TableComponent implements OnInit {
         disableClose: true,
       });
     } else if (currentPage === 'bus-station') {
-      this.dialogRef = this.dialog.open(AddModalComponent, {
+      this.dialogRef = this.dialog.open(AddBusStationComponent, {
         data: { rows: this.rows },
         disableClose: true,
       });
     } else if (currentPage === 'bus-driver') {
-      this.dialogRef = this.dialog.open(AddModalComponent, {
+      this.dialogRef = this.dialog.open(AddBusDriverComponent, {
         data: { rows: this.rows },
         disableClose: true,
       });
     } else if (currentPage === 'bus-lines') {
-      this.dialogRef = this.dialog.open(AddModalComponent, {
+      this.dialogRef = this.dialog.open(AddBusLineComponent, {
         data: { rows: this.rows },
         disableClose: true,
       });
     } else if (currentPage === 'taxi') {
-      this.dialogRef = this.dialog.open(AddModalComponent, {
+      this.dialogRef = this.dialog.open(AddTaxiComponent, {
         data: { rows: this.rows },
         disableClose: true,
       });
     } else if (currentPage === 'taxi-driver') {
-      this.dialogRef = this.dialog.open(AddModalComponent, {
+      this.dialogRef = this.dialog.open(AddTaxiDriverComponent, {
         data: { rows: this.rows },
         disableClose: true,
       });
-    } else if (currentPage === 'clients') {
-      this.dialogRef = this.dialog.open(AddModalComponent, {
-        data: { rows: this.rows },
-        disableClose: true,
-      });
-    }
+    } 
   
     if (this.dialogRef) {
       this.dialogRef.componentInstance.saveRow.subscribe((newRow: any) => {

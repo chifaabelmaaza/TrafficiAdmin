@@ -8,11 +8,12 @@ import { TaxiListComponent } from './Pages/taxi/taxi-list/taxi-list.component';
 import { TaxiDriversComponent } from './Pages/taxi/taxi-drivers/taxi-drivers.component';
 import { ClientListComponent } from './Pages/client/client-list/client-list.component';
 import { TravelsComponent } from './Pages/client/travels/travels.component';
-import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 import { MessagesComponent } from './Pages/messages/messages.component';
+import { DashboardComponent } from './Pages/Dashboard/dashboard.component';
+import { LoginComponent } from './Pages/login/login.component';
 
 const routes: Routes = [
-  { path: '', component:  BusListComponent},
+  { path: '', component:  DashboardComponent},
   { path: 'dashboard', component:  DashboardComponent},
   { path: 'messages', component:  MessagesComponent},
   { path: 'bus', component:  BusListComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'taxi-driver', component:  TaxiDriversComponent},
   { path: 'clients', component:  ClientListComponent},
   { path: 'travels', component:  TravelsComponent},
+  { path: 'login', component:  LoginComponent},
 ];
 
 @NgModule({
